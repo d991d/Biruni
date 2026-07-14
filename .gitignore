@@ -1,0 +1,17 @@
+# Xcode
+build/
+DerivedData/
+*.xcuserstate
+xcuserdata/
+.DS_Store
+
+# Swift Package Manager
+.build/
+.swiftpm/
+
+# Stray duplicate app builds
+Biruni 20*/
+*.app/
+
+# macOS
+.DS_Store

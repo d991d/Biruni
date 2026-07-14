@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		B61D6A023002180000A233EF /* NCCore in Frameworks */ = {isa = PBXBuildFile; productRef = B61D6A013002180000A233EF /* NCCore */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		B61D69A33002176600A233EF /* Biruni.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Biruni.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -23,6 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B61D6A023002180000A233EF /* NCCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +70,7 @@
 			);
 			name = Biruni;
 			packageProductDependencies = (
+				B61D6A013002180000A233EF /* NCCore */,
 			);
 			productName = Biruni;
 			productReference = B61D69A33002176600A233EF /* Biruni.app */;
@@ -94,6 +100,9 @@
 			);
 			mainGroup = B61D699A3002176600A233EF;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				B61D6A003002180000A233EF /* XCLocalSwiftPackageReference "NCCore" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = B61D69A43002176600A233EF /* Products */;
 			projectDirPath = "";
@@ -179,7 +188,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MACOSX_DEPLOYMENT_TARGET = 26.5;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -237,7 +246,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MACOSX_DEPLOYMENT_TARGET = 26.5;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -254,21 +263,26 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = WT4MKCRR7T;
-				ENABLE_APP_SANDBOX = YES;
+				ENABLE_APP_SANDBOX = NO;
 				ENABLE_HARDENED_RUNTIME = YES;
-				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INFOPLIST_KEY_NSMainNibFile = MainMenu;
+				INFOPLIST_KEY_CFBundleDisplayName = Biruni;
+				INFOPLIST_KEY_LSMinimumSystemVersion = 12.0;
+				INFOPLIST_KEY_NSDesktopFolderUsageDescription = "Biruni needs access to your Desktop folder to list and manage files there, just like Finder.";
+				INFOPLIST_KEY_NSDocumentsFolderUsageDescription = "Biruni needs access to your Documents folder to list and manage files there, just like Finder.";
+				INFOPLIST_KEY_NSDownloadsFolderUsageDescription = "Biruni needs access to your Downloads folder to list and manage files there, just like Finder.";
+				INFOPLIST_KEY_NSHighResolutionCapable = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "© 2026 Oxin Studio Inc. All rights reserved.";
+				INFOPLIST_KEY_NSNetworkVolumesUsageDescription = "Biruni needs access to network volumes to browse and manage files on them.";
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				INFOPLIST_KEY_NSRemovableVolumesUsageDescription = "Biruni needs access to removable volumes to browse and manage files on them.";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.oxinstudio.Biruni;
+				PRODUCT_BUNDLE_IDENTIFIER = com.oxinstudio.biruni;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				REGISTER_APP_GROUPS = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
@@ -287,21 +301,26 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = WT4MKCRR7T;
-				ENABLE_APP_SANDBOX = YES;
+				ENABLE_APP_SANDBOX = NO;
 				ENABLE_HARDENED_RUNTIME = YES;
-				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INFOPLIST_KEY_NSMainNibFile = MainMenu;
+				INFOPLIST_KEY_CFBundleDisplayName = Biruni;
+				INFOPLIST_KEY_LSMinimumSystemVersion = 12.0;
+				INFOPLIST_KEY_NSDesktopFolderUsageDescription = "Biruni needs access to your Desktop folder to list and manage files there, just like Finder.";
+				INFOPLIST_KEY_NSDocumentsFolderUsageDescription = "Biruni needs access to your Documents folder to list and manage files there, just like Finder.";
+				INFOPLIST_KEY_NSDownloadsFolderUsageDescription = "Biruni needs access to your Downloads folder to list and manage files there, just like Finder.";
+				INFOPLIST_KEY_NSHighResolutionCapable = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "© 2026 Oxin Studio Inc. All rights reserved.";
+				INFOPLIST_KEY_NSNetworkVolumesUsageDescription = "Biruni needs access to network volumes to browse and manage files on them.";
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				INFOPLIST_KEY_NSRemovableVolumesUsageDescription = "Biruni needs access to removable volumes to browse and manage files on them.";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.oxinstudio.Biruni;
+				PRODUCT_BUNDLE_IDENTIFIER = com.oxinstudio.biruni;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				REGISTER_APP_GROUPS = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
@@ -333,6 +352,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		B61D6A003002180000A233EF /* XCLocalSwiftPackageReference "NCCore" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = NCCore;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B61D6A013002180000A233EF /* NCCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = NCCore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B61D699B3002176600A233EF /* Project object */;
 }
