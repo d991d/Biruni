@@ -169,7 +169,6 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = WT4MKCRR7T;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -233,7 +232,6 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = WT4MKCRR7T;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -262,7 +260,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = WT4MKCRR7T;
 				ENABLE_APP_SANDBOX = NO;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -272,7 +269,7 @@
 				INFOPLIST_KEY_NSDocumentsFolderUsageDescription = "Biruni needs access to your Documents folder to list and manage files there, just like Finder.";
 				INFOPLIST_KEY_NSDownloadsFolderUsageDescription = "Biruni needs access to your Downloads folder to list and manage files there, just like Finder.";
 				INFOPLIST_KEY_NSHighResolutionCapable = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "© 2026 Oxin Studio Inc. All rights reserved.";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "© 2026 Davood Bagherzadeh Ansari";
 				INFOPLIST_KEY_NSNetworkVolumesUsageDescription = "Biruni needs access to network volumes to browse and manage files on them.";
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				INFOPLIST_KEY_NSRemovableVolumesUsageDescription = "Biruni needs access to removable volumes to browse and manage files on them.";
@@ -281,7 +278,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.oxinstudio.biruni;
+				PRODUCT_BUNDLE_IDENTIFIER = com.d991d.biruni;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
@@ -300,7 +297,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = WT4MKCRR7T;
 				ENABLE_APP_SANDBOX = NO;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -310,7 +306,7 @@
 				INFOPLIST_KEY_NSDocumentsFolderUsageDescription = "Biruni needs access to your Documents folder to list and manage files there, just like Finder.";
 				INFOPLIST_KEY_NSDownloadsFolderUsageDescription = "Biruni needs access to your Downloads folder to list and manage files there, just like Finder.";
 				INFOPLIST_KEY_NSHighResolutionCapable = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "© 2026 Oxin Studio Inc. All rights reserved.";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "© 2026 Davood Bagherzadeh Ansari";
 				INFOPLIST_KEY_NSNetworkVolumesUsageDescription = "Biruni needs access to network volumes to browse and manage files on them.";
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				INFOPLIST_KEY_NSRemovableVolumesUsageDescription = "Biruni needs access to removable volumes to browse and manage files on them.";
@@ -319,7 +315,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.oxinstudio.biruni;
+				PRODUCT_BUNDLE_IDENTIFIER = com.d991d.biruni;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
