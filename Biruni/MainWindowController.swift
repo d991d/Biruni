@@ -492,7 +492,7 @@ final class MainWindowController: NSWindowController {
         RetroDialogs.message(
             title: "Biruni",
             message: """
-            Biruni - a native macOS tribute to Norton Commander (1986).
+            Biruni, by d991d - a native macOS tribute to Norton Commander (1986).
 
             Named for Abu Rayhan al-Biruni (973-1048), a Persian scholar from Khwarazm and one of the great polymaths of medieval science. Working across mathematics, astronomy, geography, and history, he calculated Earth's radius from a mountaintop using trigonometry, landing within about 1% of its true value; catalogued the calendars and eras of a dozen civilizations in his Chronology of Ancient Nations; and, after years in India, wrote Kitab al-Hind, an unusually even-handed study of Indian society and science for its era. He corresponded with Ibn Sina on the nature of the physical world and was among the first to seriously entertain the idea that the Earth rotates on its own axis.
 

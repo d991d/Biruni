@@ -1,6 +1,6 @@
 # Biruni
 
-A native macOS tribute to Norton Commander (1986),
+By d991d. A native macOS tribute to Norton Commander (1986),
 named for the 10th-century Persian polymath Abu Rayhan al-Biruni:
 dual-pane file browsing, the classic blue/cyan/yellow DOS palette, F1-F10
 function keys, a pulldown menu bar, a command line, archive browsing, and
@@ -105,4 +105,4 @@ Security > Files and Folders**.
 
 ## License
 
-© 2026 Davood Bagherzadeh Ansari. All rights reserved.
+© 2026 d991d. All rights reserved.
