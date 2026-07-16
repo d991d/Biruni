@@ -5,19 +5,46 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
 
     private var windowController: MainWindowController?
 
+    // The @main synthesis for a plain NSApplicationDelegate class is
+    // supposed to instantiate this class and assign it as NSApp.delegate
+    // automatically, with no nib/storyboard needed. In practice that
+    // synthesis was silently not wiring up the delegate here (confirmed by
+    // breakpointing applicationDidFinishLaunching and never hitting it,
+    // while `sample` showed the process happily idling in
+    // -[NSApplication run]'s event loop) - the process launches and never
+    // crashes, it just never calls into this class at all, so no window
+    // is ever created. Writing main() explicitly bypasses whatever's wrong
+    // with that synthesis by doing the delegate assignment ourselves,
+    // which is the same thing @NSApplicationMain used to do for free.
+    static func main() {
+        NSLog("[Biruni-DIAG] custom static main(): start")
+        let app = NSApplication.shared
+        let delegate = AppDelegate()
+        app.delegate = delegate
+        NSLog("[Biruni-DIAG] delegate assigned: \(delegate), NSApp.delegate=\(String(describing: app.delegate))")
+        app.run()
+        NSLog("[Biruni-DIAG] app.run() returned (app is quitting)")
+    }
+
     func applicationDidFinishLaunching(_ notification: Notification) {
+        NSLog("[Biruni-DIAG] applicationDidFinishLaunching: start")
         // Biruni doesn't use a XIB/storyboard for its menu bar - the whole
         // UI (panels, menus, dialogs) is built programmatically to get the
         // hand-drawn retro look, so there's no MainMenu.xib supplying
         // NSApp.mainMenu for free. Build it here instead.
         NSApp.mainMenu = Self.buildMainMenu(target: self)
+        NSLog("[Biruni-DIAG] main menu built")
 
         let controller = MainWindowController()
+        NSLog("[Biruni-DIAG] MainWindowController() init returned")
         windowController = controller
         controller.showWindow(nil)
+        NSLog("[Biruni-DIAG] showWindow(nil) returned")
         controller.window?.makeKeyAndOrderFront(nil)
+        NSLog("[Biruni-DIAG] makeKeyAndOrderFront returned; window=\(String(describing: controller.window)) isVisible=\(controller.window?.isVisible ?? false) frame=\(String(describing: controller.window?.frame))")
 
         NSApp.activate(ignoringOtherApps: true)
+        NSLog("[Biruni-DIAG] activate returned; NSApp.windows=\(NSApp.windows)")
     }
 
     func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {

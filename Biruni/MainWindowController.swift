@@ -19,10 +19,12 @@ final class MainWindowController: NSWindowController {
     private var root: MainRootView { window!.contentView as! MainRootView }
 
     init() {
+        NSLog("[Biruni-DIAG] MainWindowController.init: start")
         let home = FileManager.default.homeDirectoryForCurrentUser.path
         leftPanel = PanelViewController(startPath: home)
         rightPanel = PanelViewController(startPath: home)
         activePanel = leftPanel
+        NSLog("[Biruni-DIAG] panels constructed")
 
         let window = MainWindow(
             contentRect: NSRect(x: 0, y: 0, width: 1100, height: 680),
@@ -41,11 +43,14 @@ final class MainWindowController: NSWindowController {
         // visible even though the process stayed alive. Opt this window
         // out of that system entirely.
         window.isRestorable = false
+        NSLog("[Biruni-DIAG] MainWindow created: frame=\(window.frame)")
 
         super.init(window: window)
+        NSLog("[Biruni-DIAG] super.init(window:) returned")
 
         let rootView = MainRootView(frame: window.contentView!.bounds)
         window.contentView = rootView
+        NSLog("[Biruni-DIAG] rootView assigned as contentView: bounds=\(rootView.bounds)")
 
         rootView.splitView.addArrangedSubview(leftPanel.view)
         rootView.splitView.addArrangedSubview(rightPanel.view)
@@ -74,15 +79,20 @@ final class MainWindowController: NSWindowController {
             self.window?.makeFirstResponder(self.activePanel.tableView)
         }
 
+        NSLog("[Biruni-DIAG] about to reload panels")
         leftPanel.reload()
         rightPanel.reload()
+        NSLog("[Biruni-DIAG] panels reloaded")
         rootView.commandLine.setPromptPath(activePanel.state.location.nearestRealDirectory)
+        NSLog("[Biruni-DIAG] MainWindowController.init: end")
     }
 
     required init?(coder: NSCoder) { fatalError("init(coder:) not implemented") }
 
     override func showWindow(_ sender: Any?) {
+        NSLog("[Biruni-DIAG] showWindow(_:) override: start, window=\(String(describing: window))")
         super.showWindow(sender)
+        NSLog("[Biruni-DIAG] showWindow(_:) override: super returned, isVisible=\(window?.isVisible ?? false)")
         establishInitialFocusAndSplit()
     }
 
@@ -94,8 +104,13 @@ final class MainWindowController: NSWindowController {
     /// bounds may still be its pre-layout placeholder size. Waiting one
     /// turn guarantees both are settled.
     private func establishInitialFocusAndSplit() {
+        NSLog("[Biruni-DIAG] establishInitialFocusAndSplit: dispatching async block")
         DispatchQueue.main.async { [weak self] in
-            guard let self, self.window != nil else { return }
+            NSLog("[Biruni-DIAG] establishInitialFocusAndSplit: async block firing, self=\(String(describing: self)) window=\(String(describing: self?.window))")
+            guard let self, self.window != nil else {
+                NSLog("[Biruni-DIAG] establishInitialFocusAndSplit: bailing, self or window is nil")
+                return
+            }
             self.leftPanel.focus()
             let width = self.root.splitView.bounds.width
             if width > 0 {
